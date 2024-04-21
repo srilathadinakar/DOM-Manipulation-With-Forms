@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation with forms</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <header>
+      <div class="container px-5 px-md-5 py-3 py-md-3 text-center ">
+        <h1 id="title">DOM Manipulation with forms</h1>
+        <p id="description">Form and Table created using HTML,CSS and DOM </p>
+      </div>
+    </header>
+    <main>
+      <div class="container px-5 px-md-5 ">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <form id="form">
+              <div class="form-group mb-3 mb-md-3">
+                <label for="first-name" class="form-label fw-bold ">First Name:</label>
+                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="Enter your Firstname" required />
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="last-name" class="form-label fw-bold ">Last Name:</label>
+                <input type="text" class="form-control" name="last-name" id="last-name" placeholder ="Enter your Lastname" required />
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="address" class="form-label fw-bold">Address:</label>
+                <textarea name="address" class="form-control" id="address" cols="10" rows="4" placeholder ="Enter your address"></textarea>
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="pincode" class="form-label fw-bold">Pincode:</label>
+                <input type="text" class="form-control" name="pincode" id="pincode" placeholder ="Enter your pincode" required />
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="gender" id="gender" class="form-label fw-bold">Gender:</label>
+                <span>&nbsp;
+                  <input type="radio" name="gender" id="male" value="Male">
+                  <label for="male">Male</label>
+                </span>
+                <span>&nbsp;
+                  <input type="radio" name="gender" id="female" value="Female">
+                  <label for="female">Female</label>
+                </span>
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="food" id="foodlist" class="form-label fw-bold">Foods:</label>
+                <span>&nbsp;
+                  <input type="checkbox" name="food" id="idly" value="idly">
+                  <label for="idly">Idly</label>
+                </span>
+                <span>&nbsp;
+                  <input type="checkbox" name="food" id="dosai" value="dosai">
+                  <label for="dosai">Dosai</label>
+                </span>
+                <span>&nbsp;
+                  <input type="checkbox" name="food" id="chapathi" value="chapathi">
+                  <label for="chapathi">Chapathi</label>
+                </span>
+                <span>&nbsp;
+                  <input type="checkbox" name="food" id="parota" value="parota">
+                  <label for="parota">Parota</label>
+                </span>
+                <span>&nbsp;
+                  <input type="checkbox" name="food" id="briyani" value="briyani">
+                  <label for="briyani">Briyani</label>
+                </span><br />
+                <span id="error" class="text-danger fw-bold"></span>
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="state" class="form-label fw-bold">State:</label>
+                <input type="text" class="form-control" name="state" id="state" placeholder ="Enter your state" required />
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <label for="country" class="form-label fw-bold">Country:</label>
+                <input type="text" class="form-control" name="country" id="country" placeholder ="Enter your country" required />
+              </div>
+              <div class="form-group mb-3 mb-md-3">
+                <button type="submit" value="submit" id="submit" class="btn btn-primary ">Submit</button>
+              </div>
+            </form>
+          </div><!-- col-12 -->
+          
+          <div class="col-12 col-md-6" style="border-top:none" id="table-content">
+            <!-- <table class="table">
+              <caption id="caption" class="fw-bold "></caption>
+              <thead><tr><th></th><th></th>
+              <th></th></tr></thead>
+              <tbody id="tbody"></tbody>
+            </table>  -->
+          </div>
+
+        </div><!-- row-->
+
+      </div>
+    </main>
+       
+    <script src="script.js"></script>
+  </body>
+</html>
